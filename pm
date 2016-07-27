@@ -2,7 +2,7 @@
 
 init() {
 
-sudo echo "rdr pass on lo0 inet proto tcp from any to any port 80 -> 127.0.0.1 port $1 
+echo "rdr pass on lo0 inet proto tcp from any to any port 80 -> 127.0.0.1 port $1 
 rdr pass on en0 inet proto tcp from any to any port 80 -> 127.0.0.1 port $1 
 " | sudo tee /etc/pf.anchors/com.pow
 
